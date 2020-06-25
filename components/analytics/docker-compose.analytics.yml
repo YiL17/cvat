@@ -8,7 +8,7 @@ services:
         aliases:
           - elasticsearch
     build:
-      context: ./components/analytics/elasticsearch
+      context: /home/aicoe/cvat/components/analytics/elasticsearch
       args:
         ELK_VERSION: 6.4.0
     volumes:
@@ -23,7 +23,7 @@ services:
         aliases:
           - kibana
     build:
-      context: ./components/analytics/kibana
+      context: /home/aicoe/cvat/components/analytics/kibana
       args:
         ELK_VERSION: 6.4.0
     depends_on: ['cvat_elasticsearch']
@@ -44,12 +44,12 @@ services:
   cvat_logstash:
     container_name: cvat_logstash
     image: cvat_logstash
-    networks:
+   networks:
       default:
         aliases:
           - logstash
     build:
-      context: ./components/analytics/logstash
+      context: /home/aicoe/cvat/components/analytics/logstash
       args:
         ELK_VERSION: 6.4.0
         http_proxy:  ${http_proxy}
