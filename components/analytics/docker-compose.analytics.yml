@@ -44,7 +44,7 @@ services:
   cvat_logstash:
     container_name: cvat_logstash
     image: cvat_logstash
-   networks:
+    networks:
       default:
         aliases:
           - logstash
