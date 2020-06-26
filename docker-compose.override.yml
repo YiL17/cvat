@@ -25,30 +25,30 @@ volumes:
   cvat_share:
     driver_opts:
       type: none
-      device: /data/share
+      device: /datadrive/share
       o: bind
   cvat_data:
     driver_opts:
       type: none
-      device: /data/data
+      device: /datadrive/data
       o: bind
   cvat_keys:
     driver_opts:
       type: none
-      device: /data/keys
+      device: /datadrive/keys
       o: bind
   cvat_models:
     driver_opts:
       type: none
-      device: /data/models
+      device: /datadrive/models
       o: bind
   cvat_logs:
     driver_opts:
       type: none
-      device: /data/logs
+      device: /datadrive/logs
       o: bind
   cvat_db:
     driver_opts:
-      device: /data/db
+      device: /datadrive/db
       type: none
       o: bind
